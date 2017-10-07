@@ -13,5 +13,4 @@ github_username: SwimingKim
 # Build settings
 markdown: kramdown
 
-disqus:
-  id: "devskim"
+disqus: "devskim"
