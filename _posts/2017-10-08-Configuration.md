@@ -6,18 +6,18 @@ categories: Config
 ---
 
 ## ubuntu:16.04
-```bash
+```
 apt-get updates
 apt-get install git build-essential vim -y
 ```
 
 ## macOS
-```bash
+```
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
 ## Python
-```bash
+```
 // ubuntu
 sudo apt-get install ruby-full
 
@@ -26,9 +26,9 @@ brew install python3
 ```
 
 ## nodejs : <https://nodejs.org/ko/download/package-manager/>
-```bash
+```
 // ubuntu
-curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_6.x | sudo -E  -
 sudo apt-get install -y nodejs
 
 // macOS
@@ -36,7 +36,7 @@ brew install node
 ```
 
 ## ruby : <https://www.ruby-lang.org/ko/downloads/>
-```bash
+```
 // ubuntu
 sudo apt-get install ruby-full ruby-build
 

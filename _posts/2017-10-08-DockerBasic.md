@@ -6,7 +6,7 @@ categories: Config
 ---
 
 ## Docker Images
-```bash
+```
 docker search ubuntu:16.04
 docker pull ubuntu:16.04
 
@@ -15,11 +15,11 @@ docker rmi [Image]
 ```
 
 ## Docker Containers
-```bash
+```
 docker run -it 
 --v \host\data\path\:\docker\data\path\
 -p host_port:guest_port --name mdocker
-ubuntu:16.04 /bin/bash
+ubuntu:16.04 /bin/
 
 docker ps
 docker ps -a
