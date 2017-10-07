@@ -1,10 +1,8 @@
 ---
-title: MySQL Basic
+layout: post
+title: MySQL 문법 정리
 date: 2017-10-06 13:34:15
-categories:
-    - DataBase
-    - MySQL
-tags: [Programming, Study, MySQL]
+categories: Database
 ---
 
 ### CRUD

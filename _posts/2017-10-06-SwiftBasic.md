@@ -1,10 +1,8 @@
 ---
-title: Swift Basic
+layout: post
+title: Swift 문법 정리
 date: 2017-10-06 13:45:07
-categories: 
-    - Programming Language
-    - Swift
-tags: [Programming, Study, Swift]
+categories: Study
 ---
 
 ### 자료형
@@ -32,11 +30,11 @@ guard true else {
 
 var val = 1
 switch val {
-  case 0:
+    case 0:
 
-  case 1:
+    case 1:
 
-  default:
+    default:
 
 }
 
@@ -46,7 +44,7 @@ switch val {
 
 ```swift
 for row in 1...2 {
-  print("\(i)입니다")
+    print("\(i)입니다")
 }
 
 while true {
@@ -82,9 +80,9 @@ print(temp)
 
 ```swift
 func printHello(name : String, _ msg : String, newline : Bool = true) {
-  var name = name
-  name = name + "님"
-  print("\(name), \(msg)", newline)
+    var name = name
+    name = name + "님"
+    print("\(name), \(msg)", newline)
 }
 
 var count = 30
@@ -96,7 +94,7 @@ print(count)
 
 ```swift
 { () -> () in
-  print("클로저가 실행됩니다")
+    print("클로저가 실행됩니다")
 }
 ```
 
@@ -108,11 +106,11 @@ struct Resolution {
 }
 
 class VideoMode {
-  var name : String?
+    var name : String?
 
-  init(name : String) {
-    self.name = name
-  }
+    init(name : String) {
+        self.name = name
+    }
 }
 ```
 
@@ -121,32 +119,32 @@ class VideoMode {
 ```swift
 1. 저장 프로퍼티
 class User {
-  var name : String = ""
-  lazy var value : String {
-    print("value excute")
-    return value
-  }()
+    var name : String = ""
+    lazy var value : String {
+        print("value excute")
+        return value
+    }()
 }
 
 2. 연산 프로퍼티
 struct UserInfo {
 
-  var thisYear : Int! {
-    get {
-      let df = DateFormatter()
-      df.dateFormat = "yyyy"
-      return Int(df.string(from : Date()))
-    }
-    set {
+    var thisYear : Int! {
+        get {
+            let df = DateFormatter()
+            df.dateFormat = "yyyy"
+            return Int(df.string(from : Date()))
+        }
+        set {
 
+        }
     }
-  }
 
 }
 
 3. 타입 프로퍼티
 struct Foo {
-  static var sFoo = "구조체 타입 프로퍼티값"
+    static var sFoo = "구조체 타입 프로퍼티값"
 }
 Foo.sFoo = "새로운 값"
 
@@ -157,15 +155,15 @@ Foo.sFoo = "새로운 값"
 ```swift
 class Car : Vehicle {
 
-  var engineLevel = 0
-  override var currentSpeed : Double {
-    get {
-      return Double(self.engineLevel * 50)
-    }
-    set {
+    var engineLevel = 0
+    override var currentSpeed : Double {
+        get {
+            return Double(self.engineLevel * 50)
+        }
+        set {
 
+        }
     }
-  }
 
 }
 ```

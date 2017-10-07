@@ -1,10 +1,8 @@
 ---
-title: Python Basic
+layout: post
+title: python 문법 정리
 date: 2017-10-06 04:27:03
-categories:
-    - Programming Language
-    - Python
-tags: [Programming, Study, Python]
+categories: Study
 ---
 
 ### 컴퓨터의 출력과 사용자의 입력
@@ -18,20 +16,20 @@ num = input()
 
 ```python
 if True :
-  print("True입니다.")
+    print("True입니다.")
 elif False :
-  print("False입니다.")
+    print("False입니다.")
 else :
-  print("알 수 없습니다.")
+    print("알 수 없습니다.")
 ```
 
 ### 반복문
 
 ```python
 for row in list :
-  print("{}입니다.".format(row))
+    print("{}입니다.".format(row))
 for row in range(10) :
-  print("{}입니다.".format(row))
+    print("{}입니다.".format(row))
 
 # 리스트의 for문
 names = ['철수', '영희', '바둑이', '귀도']
@@ -51,7 +49,7 @@ for key in ages: # for key in ages.keys():
     print('{}의 나이는 {}입니다'.format(key, ages[key]))
 
 while condition :
-  pritn("반복하는 중입니다.")
+    pritn("반복하는 중입니다.")
 ```
 
 ### 집단 자료형
@@ -68,9 +66,9 @@ mlist.pop(0) # 삭제3 : 인덱스
 
 # 딕션너리
 mdict = {
-  'one' : 1,
-  'two' : 2,
-  'three' : 3,
+    'one' : 1,
+    'two' : 2,
+    'three' : 3,
 }
 mdict['one'] = 11 # 수정
 mdict['three'] = 3 # 추가
@@ -89,17 +87,17 @@ d, e = c # unpacking
 f = d, e # packing
 ```
 
-### 함수  
+### 함수    
 
 ```python
 def mfunc() :
-  print("함수입니다.")
+    print("함수입니다.")
 ```
 
 ### 클래스
 
 ```python
 class mCls(부모) :
-  def __init__(self, user) :
-    self.user = user;
+    def __init__(self, user) :
+        self.user = user;
 ```

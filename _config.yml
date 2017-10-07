@@ -1,3 +1,18 @@
+<<<<<<< HEAD
+# Site settings
+title: skim blog
+motto: Happy Coding
+email: rumex13@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  Developer, Coding, Programming
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://skim.kr" # the base hostname & protocol for your site
+twitter_username: rumex13
+github_username:  SwimingKim
+
+# Build settings
+markdown: kramdown
+=======
 #
 # This file contains configuration flags to customize your site
 #
@@ -86,3 +101,4 @@ exclude:
   - CNAME
 
 theme: jekyll-theme-slate
+>>>>>>> 8e06c4ba70362d1d705c32c6ffe9e07291776208

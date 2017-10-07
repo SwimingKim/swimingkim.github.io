@@ -1,10 +1,8 @@
 ---
-title: Nodejs Basic
+layout: post
+title: node.js 문법 정리
 date: 2017-10-05 16:02:21
-categories: 
-    - Server
-    - Nodejs
-tags: [Programming, Study, JavaScript, Nodejs]
+categories: Web
 ---
 
 ### 시작

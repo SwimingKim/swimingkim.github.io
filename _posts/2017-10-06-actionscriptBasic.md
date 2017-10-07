@@ -1,10 +1,8 @@
 ---
-title: actionscript Basic
+layout: post
+title: actionscript 문법 정리
 date: 2017-10-06 13:47:36
-categories: 
-    - Programming Language
-    - actionscript
-tags: [Programming, Study, actionscript]
+categories: Study
 ---
 
 ### 자료형  

@@ -1,10 +1,8 @@
 ---
-title: Javascript Basic
+layout: post
+title: javascript 문법 정리
 date: 2017-10-06 03:20:51
-categories: 
-    - Programming Language
-    - JavaScript
-tags: [Programming, Study, JavaScript]
+categories: Web
 ---
 
 ### 기본 자료형
