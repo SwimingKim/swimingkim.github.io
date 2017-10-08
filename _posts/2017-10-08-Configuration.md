@@ -26,7 +26,8 @@ sudo apt-get install ruby-full
 brew install python3
 ```
 
-## nodejs : <https://nodejs.org/ko/download/package-manager/>
+## nodejs
+<https://nodejs.org/ko/download/package-manager/>
 ```
 // ubuntu
 curl -sL https://deb.nodesource.com/setup_6.x | sudo -E  -
@@ -36,7 +37,8 @@ sudo apt-get install -y nodejs
 brew install node
 ```
 
-## ruby : <https://www.ruby-lang.org/ko/downloads/>
+## ruby
+<https://www.ruby-lang.org/ko/downloads/>
 ```
 // ubuntu
 sudo apt-get install ruby-full ruby-build
