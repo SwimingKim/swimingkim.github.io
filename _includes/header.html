@@ -65,6 +65,11 @@
 					<img width="19px" height="19px" src="/images/home.png"/>
 				</a>
 			</li>
+			<li>
+				<a href="{{ site.mailurl }}" title="Mail">
+					<img width="19px" height="19px" src="/images/mail.png"/>
+				</a>
+			</li>
 		</ul>		
 
 	</div>
@@ -82,7 +87,7 @@
 		  </svg>
 		</a>
 		<input type="text" placeholder="검색어를 입력해주세요" class="search__input" id="js-search__input">
-		<ul class="search__results" id="js-search__results"></ul>
-	  </div>
+		<ul class="search__results" id="js-search__results" onclick="closeSearch()"></ul>
+	</div>
 	
 </header>

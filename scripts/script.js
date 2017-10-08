@@ -124,4 +124,18 @@
 		lastSearchResultHash = currentResultHash;
 	});
 
+	window.closeSearch = function() {
+		window._gaq && _gaq.push(['_trackEvent', 'supersearch', searchEl.classList.contains('is-active')]);
+		searchEl.classList.toggle('is-active');
+		if (searchEl.classList.contains('is-active')) {
+			// while opening
+			searchInputEl.value = '';
+		} else {
+			// while closing
+			searchResultsEl.classList.add('is-hidden');
+		}
+		// setTimeout(function () {
+		// 	searchInputEl.focus();
+		// }, 210);
+	};
 })();
