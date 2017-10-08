@@ -337,9 +337,13 @@ SEARCH BAR
   }
   
 // toc
+#toc > ul {
+    padding-left: 20px;
+    // margin-top: 20px;
+    // margin-bottom: 20px;
+}
 #toc .nav>li {
     display: block;
-    margin: 10px;
 }
 /* active & hover links */
 #toc .nav>.active>a, 
@@ -372,12 +376,18 @@ SEARCH BAR
     font-size: 13px;
     font-weight: 400;
 }
+/* nested links */
+#toc .nav .nav>li>a {
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 30px;
+    font-size: 12px;
+}
 
 @media (min-width: 1200px) {
     #toc > ul {
         position: fixed;
-        top: 220px;
-        left: 0px;
+        left: 0;
     }
 
     /* hide inactive nested list */
