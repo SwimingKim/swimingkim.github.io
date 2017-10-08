@@ -5,14 +5,21 @@ $(function(){
         }, 500);
     });
     $(window).load(function() {
-		$('#gotop').hide();
+        $('#gotop').hide();
     });
     
     $(window).scroll(function() {
+        var btn = $('#gotop'),
+        view_posY = btn.offset().top + btn.height() + 10,
+        total_height = $(document).height(),
+        scroll_percent = parseInt(view_posY / total_height * 100);
+        btn.text( '↑\t'+scroll_percent+'%' );
+        // console.log(view_posY, total_height, scroll_percent);
+
         if ( $(this).scrollTop() > 300){
-            $('#gotop').fadeIn("fast");
+            btn.fadeIn("fast");
         } else {
-            $('#gotop').stop().fadeOut("fast");
+            btn.stop().fadeOut("fast");
         }
     });
 });
