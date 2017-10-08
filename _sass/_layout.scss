@@ -336,3 +336,60 @@ SEARCH BAR
     text-align: right;
   }
   
+// toc
+#toc .nav>li {
+    display: block;
+    margin: 10px;
+}
+/* active & hover links */
+#toc .nav>.active>a, 
+#toc .nav>li>a:hover, 
+#toc .nav>li>a:focus {
+    color: #563d7c;                 
+    text-decoration: none;          
+    background-color: transparent;  
+    border-left-color: #563d7c; 
+}
+/* all active links */
+#toc .nav>.active>a, 
+#toc .nav>.active:hover>a,
+#toc .nav>.active:focus>a {
+    font-weight: 700;
+}
+/* nested active links */
+#toc .nav .nav>.active>a, 
+#toc .nav .nav>.active:hover>a,
+#toc .nav .nav>.active:focus>a {
+    font-weight: 500;
+}
+
+
+/* all links */
+#toc .nav>li>a {
+    color: #999;
+    border-left: 2px solid transparent;
+    padding: 4px 20px;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+@media (min-width: 1200px) {
+    #toc > ul {
+        position: fixed;
+        top: 220px;
+        left: 0px;
+    }
+
+    /* hide inactive nested list */
+    #toc .nav ul.nav {
+        display: none;           
+    }
+    /* show active nested list */
+    #toc .nav>.active>ul.nav {
+        display: block;           
+    }
+
+}
+
+
+  

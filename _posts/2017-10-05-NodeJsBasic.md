@@ -75,7 +75,8 @@ app.get('/template', function(req, res) {
 });
 ```
 
-### Query String ( http://localhost:3000/topic?id=0 )
+### Query String
+http://localhost:3000/topic?id=0
 ```javascript
 app.get('/topic', function(req, res) {
     var topics = [
@@ -93,7 +94,8 @@ app.get('/topic', function(req, res) {
 });
 ```
 
-### Symentic URL ( http://localhost:3000/2/edit )
+### Symentic URL
+http://localhost:3000/2/edit
 ```javascript
 app.get('topic/:id/:mode', function(req, res) {
     res.send( req.params.id+','+req.params.mode );

@@ -21,7 +21,8 @@ Object
 trace( ~~ );
 ```
 
-### 반복문, 조건문 : if, switch, while, for
+### 반복문, 조건문
+if, switch, while, for
 
 ### 변수선언
 ```actionscript
