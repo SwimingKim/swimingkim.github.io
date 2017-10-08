@@ -3,6 +3,7 @@ layout: post
 title: 안드로이드용 유니티 플러그인 예시
 date: 2017-10-06 13:55:50
 categories: Unity
+tags: [programming, unity, android]
 ---
 
 ## 안드로이드 스튜디오

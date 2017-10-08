@@ -3,6 +3,7 @@ layout: post
 title: Swift 문법 정리
 date: 2017-10-06 13:45:07
 categories: Study
+tags: [programming, swift, iOS]
 ---
 
 ### 자료형

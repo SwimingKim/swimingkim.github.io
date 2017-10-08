@@ -6,7 +6,7 @@ $(function(){
     });
     $(window).load(function() {
 		$('#gotop').hide();
-    })
+    });
     
     $(window).scroll(function() {
         if ( $(this).scrollTop() > 300){

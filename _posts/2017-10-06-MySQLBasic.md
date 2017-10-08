@@ -3,6 +3,7 @@ layout: post
 title: MySQL 문법 정리
 date: 2017-10-06 13:34:15
 categories: Database
+tags: [programming, database]
 ---
 
 ### CRUD

@@ -3,6 +3,7 @@ layout: post
 title: C# 문법 정리
 date: 2017-10-06 13:53:30
 categories: Unity
+tags: [programming, csharp, unity]
 ---
 
 ### 기본자료형

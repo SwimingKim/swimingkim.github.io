@@ -3,6 +3,7 @@ layout: post
 title: python 문법 정리
 date: 2017-10-06 04:27:03
 categories: Study
+tags: [programming, python, statics]
 ---
 
 ### 컴퓨터의 출력과 사용자의 입력

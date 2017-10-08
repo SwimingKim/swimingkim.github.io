@@ -3,6 +3,7 @@ layout: post
 title: 개발 설정
 date: 2017-10-08 03:41:43
 categories: Config
+tags: [programming, server]
 ---
 
 ## ubuntu:16.04

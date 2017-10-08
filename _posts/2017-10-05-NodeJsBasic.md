@@ -3,6 +3,7 @@ layout: post
 title: node.js 문법 정리
 date: 2017-10-05 16:02:21
 categories: Web
+tags: [programming, javascript, web, nodejs, server]
 ---
 
 ### 시작
