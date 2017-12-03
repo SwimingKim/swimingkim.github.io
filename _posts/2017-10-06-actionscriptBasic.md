@@ -272,7 +272,7 @@ timer.start();
 var mc:MovieClip; // 무비클립 불러오기
 
 for (var i:int = 0; i < mc.currentLabels.length; i++) {
-    var frameLabel:FrameLabel = mc.currentLabel[i] as FrameLabel;
+    var frameLabel:FrameLabel = mc.currentLabels[i] as FrameLabel;
     if (frameLabel.name.indexOf("_problem") == 0) {
         mc.addFrameScript(frameLabel.frame-1, onProblem); // 레이블 추가
     }
@@ -296,7 +296,7 @@ for (i=0; i<mc.totalFrames; i++) {
 function onChanged():void {
    
     for (i=0; i<mc.currentLabels.length; i++) {
-        var frameLabel:FrameLabel = mc.currentLabel[i] as FrameLabel;
+        var frameLabel:FrameLabel = mc.currentLabels[i] as FrameLabel;
         if (frameLabel.name.indexOf("_problem") == 0) {
         mc.addFrameScript(frameLabel.frame-1, onProblem); // 레이블 추가
     }
