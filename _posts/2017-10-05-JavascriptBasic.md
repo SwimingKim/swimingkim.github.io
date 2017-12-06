@@ -62,12 +62,12 @@ function clac() {
     document.getElementById("sum").value = sum;
 }
 
-func 함수이름(인자1, 인자2) {
+function 함수이름(인자1, 인자2) {
   // 실행할 코드
   return 결과값;
 }
 
-func  msg(name, position) {
+function msg(name, position) {
     alert(name + "과" + position);
 }
 var msg = function() {
