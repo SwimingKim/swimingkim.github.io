@@ -31,6 +31,7 @@ switch (x) {
     case 0:
         break;
     default:
+        break;
 }
 ```
 
