@@ -1,68 +1,62 @@
+<!DOCTYPE html>
 <html>
 
 <head>
-  <meta charset="UTF-8">
-  <title>HTML5 Webcam Demo</title>
-
-  <script>
-      var video, canvas, context, imageData;
-  
-  function onLoad(){
-    video = document.getElementById("video");
-    canvas = document.getElementById("canvas");
-    context = canvas.getContext("2d");
-  
-    canvas.width = parseInt(canvas.style.width);
-    canvas.height = parseInt(canvas.style.height);
-    
-    navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
-    if (navigator.getUserMedia){
-      
-      function successCallback(stream){
-        if (window.webkitURL) {
-          video.src = window.webkitURL.createObjectURL(stream);
-        } else if (video.mozSrcObject !== undefined) {
-          video.mozSrcObject = stream;
-        } else {
-          video.src = stream;
-        }
-      }
-      
-      function errorCallback(error){
-      }
-      
-      navigator.getUserMedia({video: true}, successCallback, errorCallback);
-
-      requestAnimationFrame(tick);
-    }
-  }
-  
-  function tick(){
-    requestAnimationFrame(tick);
-         if (video.readyState === video.HAVE_ENOUGH_DATA){
-      snapshot();
-    }
-  }
-
-  function snapshot(){
-    context.drawImage(video, 0, 0, canvas.width, canvas.height);
-    imageData = context.getImageData(0, 0, canvas.width, canvas.height);
-  }
-        
-  window.onload = onLoad;
-  </script>
-
+    <meta charset="utf-8">
+    <title></title>
 </head>
 
-<body style="font-family: monospace;">
-
-  <center>
-    <div style="margin: 10px;"><strong>-= HTML5 Webcam Demo =-</strong></div>
-    <video id="video" autoplay="true" style="display:none;"></video>
-    <canvas id="canvas" style="width:640px; height:480px;"></canvas>
-    <div style="margin: 15px;"><strong>Adapted from <a href="http://code.google.com/p/js-aruco/">js-aruco</a></strong></div>
-  </center>
-
+<body>
+    <video id="video" width="640" height="480" autoplay></video>
+    <button id="snap">Snap Photo</button>
+    <canvas id="canvas" width="640" height="480"></canvas>
 </body>
-  
+<script type="text/javascript">
+    var video = document.getElementById('video');
+    var canvas = document.getElementById('canvas');
+    var context = canvas.getContext('2d');
+    var errBack = function(e) {
+    	console.log('An error has occurred!', e)
+    };
+    // Get access to the camera!
+    if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+        // Not adding `{ audio: true }` since we only want video now
+        navigator.mediaDevices.getUserMedia({
+            video: true
+        }).then(function(stream) {
+            video.src = window.URL.createObjectURL(stream);
+            video.play();
+        });
+    }
+    var mediaConfig =  { video: true };
+    //
+    if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+        navigator.mediaDevices.getUserMedia(mediaConfig).then(function(stream) {
+            video.src = window.URL.createObjectURL(stream);
+            video.play();
+        });
+    }
+    /* Legacy code below! */
+    else if (navigator.getUserMedia) { // Standard
+        navigator.getUserMedia(mediaConfig, function(stream) {
+            video.src = stream;
+            video.play();
+        }, errBack);
+    } else if (navigator.webkitGetUserMedia) { // WebKit-prefixed
+        navigator.webkitGetUserMedia(mediaConfig, function(stream) {
+            video.src = window.webkitURL.createObjectURL(stream);
+            video.play();
+        }, errBack);
+    } else if (navigator.mozGetUserMedia) { // Mozilla-prefixed
+        navigator.mozGetUserMedia(mediaConfig, function(stream) {
+            video.src = window.URL.createObjectURL(stream);
+            video.play();
+        }, errBack);
+    }
+    // Trigger photo take
+	document.getElementById('snap').addEventListener('click', function() {
+		context.drawImage(video, 0, 0, 640, 480);
+	});
+</script>
+
 </html>
