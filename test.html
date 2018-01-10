@@ -7,56 +7,31 @@
 </head>
 
 <body>
-    <video id="video" width="640" height="480" autoplay></video>
-    <button id="snap">Snap Photo</button>
-    <canvas id="canvas" width="640" height="480"></canvas>
+    <video id="video" width="1280" height="800" autoplay="true"></video>
+    <canvas id="canvas" width="1280" height="800"></canvas>
 </body>
 <script type="text/javascript">
     var video = document.getElementById('video');
     var canvas = document.getElementById('canvas');
     var context = canvas.getContext('2d');
-    var errBack = function(e) {
-    	console.log('An error has occurred!', e)
+    var errBack = function (e) {
+        alert(e.message);
     };
-    // Get access to the camera!
-    if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-        // Not adding `{ audio: true }` since we only want video now
-        navigator.mediaDevices.getUserMedia({
-            video: true
-        }).then(function(stream) {
-            video.src = window.URL.createObjectURL(stream);
-            video.play();
-        });
-    }
-    var mediaConfig =  { video: true };
+
+    video.setAttribute("muted", "true");
+    video.setAttribute("style", "-webkit-transform:rotateY(180deg);");
+
+    var mediaConfig = { video: true };
+    mediaConfig = { video: {facingMode: "environment", width: 480, height: 800} };
+    alert(mediaConfig.video.facingMode);
     //
     if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-        navigator.mediaDevices.getUserMedia(mediaConfig).then(function(stream) {
+        navigator.mediaDevices.getUserMedia(mediaConfig).then(function (stream) {
+		console.log(stream);
             video.src = window.URL.createObjectURL(stream);
             video.play();
         });
     }
-    /* Legacy code below! */
-    else if (navigator.getUserMedia) { // Standard
-        navigator.getUserMedia(mediaConfig, function(stream) {
-            video.src = stream;
-            video.play();
-        }, errBack);
-    } else if (navigator.webkitGetUserMedia) { // WebKit-prefixed
-        navigator.webkitGetUserMedia(mediaConfig, function(stream) {
-            video.src = window.webkitURL.createObjectURL(stream);
-            video.play();
-        }, errBack);
-    } else if (navigator.mozGetUserMedia) { // Mozilla-prefixed
-        navigator.mozGetUserMedia(mediaConfig, function(stream) {
-            video.src = window.URL.createObjectURL(stream);
-            video.play();
-        }, errBack);
-    }
-    // Trigger photo take
-	document.getElementById('snap').addEventListener('click', function() {
-		context.drawImage(video, 0, 0, 640, 480);
-	});
 </script>
 
 </html>
