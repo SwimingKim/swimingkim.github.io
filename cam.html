@@ -17,16 +17,15 @@
     var errBack = function (e) {
         alert(e.message);
     };
-
     video.setAttribute("muted", "true");
     video.setAttribute("style", "-webkit-transform:rotateY(180deg);");
-
     var mediaConfig = { video: true };
-    mediaConfig = { video: {facingMode: "user"} };
+    mediaConfig = { video: {facingMode: "environment", width: 480, height: 800} };
     alert(mediaConfig.video.facingMode);
     //
     if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
         navigator.mediaDevices.getUserMedia(mediaConfig).then(function (stream) {
+		console.log(stream);
             video.src = window.URL.createObjectURL(stream);
             video.play();
         });
