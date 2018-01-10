@@ -23,12 +23,12 @@
     mediaConfig = { video: {facingMode: "environment", width: 480, height: 800} };
     alert(mediaConfig.video.facingMode);
     //
-    if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-        navigator.mediaDevices.getUserMedia(mediaConfig).then(function (stream) {
-            video.src = window.URL.createObjectURL(stream);
-            video.play();
-        });
-    }
+    if (navigator.getUserMedia) { // Standard
+    navigator.getUserMedia(mediaConfig, function (stream) {
+      video.src = stream;
+      video.play();
+    }, errBack);
+  } 
 </script>
 
 </html>
