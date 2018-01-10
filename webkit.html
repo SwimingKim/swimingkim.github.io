@@ -15,7 +15,7 @@
     var canvas = document.getElementById('canvas');
     var context = canvas.getContext('2d');
     var errBack = function (e) {
-        alert(e.message);
+        alert(e.message+"!!");
     };
     video.setAttribute("muted", "true");
     // video.setAttribute("style", "-webkit-transform:rotateY(180deg);");
@@ -23,12 +23,14 @@
     mediaConfig = { video: {facingMode: "environment", width: 480, height: 800} };
     alert(mediaConfig.video.facingMode);
     //
-    if (navigator.getUserMedia) { // Standard
-    navigator.getUserMedia(mediaConfig, function (stream) {
-      video.src = stream;
-      video.play();
-    }, errBack);
-  } 
+    if (navigator.webkitGetUserMedia) { // WebKit-prefixed
+        navigator.webkitGetUserMedia(mediaConfig, function (stream) {
+            alert(stream);
+
+          video.src = window.webkitURL.createObjectURL(stream);
+          video.play();
+        }, errBack);
+      }
 </script>
 
 </html>
