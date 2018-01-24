@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="authoring-tool" content="Adobe_Animate_CC">
+
+    <style>
+        * {
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        }
+    </style>
+
+    <img style="margin: 0px; position: absolute; top: 0px; left: 0px;" src="../images/korean_loading.jpg">
+
+    <script src="../common/externalManager.js"></script>
+    <script>
+        var fileName = document.URL.substring(document.URL.lastIndexOf("/") + 1, document.URL.length).split('.')[0];
+        document.title = fileName;
+
+        externalManager.playMovie( "TALL/T_Grammar/T9EE50U04001_1_600k.mp4", "auto", "movie/movie.html" );
+    </script>
+</head>
+
+</html>
