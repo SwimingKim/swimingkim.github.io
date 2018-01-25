@@ -1,0 +1,32 @@
+<contents>
+  <study>
+    <ui_type>101</ui_type>
+    <chapter>1</chapter>
+    <title>③ 이야기에 대한 생각과 느낌 나누기</title>
+    <menu id="1">
+      <type>6</type>
+      <title>인트로</title>
+      <file_path>KKJ310103_a01/KKJ310103_a01.html</file_path>
+    </menu>
+    <menu id="2">
+      <type>5</type>
+      <title>교과서 읽기</title>
+      <file_path>KKJ310103_b01/KKJ310103_b01.html</file_path>
+    </menu>
+    <menu id="3">
+      <type>5</type>
+      <title>개념 배우기</title>
+      <file_path>KKJ310103_b02/KKJ310103_b02.html</file_path>
+    </menu>
+    <menu id="4">
+      <type>5</type>
+      <title>개념 활동</title>
+      <file_path>KKJ310103_b03/KKJ310103_b03.html</file_path>
+    </menu>
+    <menu id="5">
+      <type>5</type>
+      <title>한눈에 정리하기</title>
+      <file_path>KKJ310103_c01/KKJ310103_c01.html</file_path>
+    </menu>
+  </study>
+</contents>
