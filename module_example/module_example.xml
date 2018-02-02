@@ -1,0 +1,22 @@
+<contents>
+  <study>
+    <ui_type>101</ui_type>
+    <chapter>1</chapter>
+    <title>③ 이야기에 대한 생각과 느낌 나누기</title>
+    <menu id="1">
+      <type>5</type>
+      <title>카메라 기능</title>
+      <file_path>camera/camera.html</file_path>
+    </menu>
+    <menu id="2">
+      <type>5</type>
+      <title>녹음 기능</title>
+      <file_path>record/record.html</file_path>
+    </menu>
+    <menu id="3">
+      <type>5</type>
+      <title>그리기 기능</title>
+      <file_path>testDrawing/testDrawing.html</file_path>
+    </menu>
+  </study>
+</contents>
