@@ -1,0 +1,13 @@
+{
+"companyName": "DevSu",
+"productName": "PlatLang",
+"dataUrl": "PlatLang.data.unityweb",
+"asmCodeUrl": "PlatLang.asm.code.unityweb",
+"asmMemoryUrl": "PlatLang.asm.memory.unityweb",
+"asmFrameworkUrl": "PlatLang.asm.framework.unityweb",
+"TOTAL_MEMORY": 536870912,
+"graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20"
+}
