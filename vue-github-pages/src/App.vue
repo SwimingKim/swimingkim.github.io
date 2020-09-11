@@ -16,6 +16,12 @@
         <router-link class="menu-item" to="/4">
           Menu4
         </router-link>
+        <router-link class="menu-item" to="/5">
+          Menu5
+        </router-link>
+        <router-link class="menu-item" to="/6">
+          Menu6
+        </router-link>
       </ul>
     </div>
 
@@ -56,7 +62,7 @@ body {
 .menu {
   margin: 0;
   padding: 0;
-  background: steelblue;
+  /* background: steelblue; */
   position: absolute;
   width: 150px;
   height: 100%;
@@ -80,7 +86,7 @@ body {
 
 .contents {
   float: right;
-  background-color: rosybrown;
+  background-color: darkgrey;
   margin: 0 auto;
   display: flex;
   position: absolute;

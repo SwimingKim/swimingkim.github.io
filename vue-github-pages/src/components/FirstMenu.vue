@@ -6,6 +6,8 @@
           <li class="obj"></li>
           <li class="obj"></li>
           <li class="obj"></li>
+          <li class="obj"></li>
+          <li class="obj"></li>
       </ul>
   </div>
 </template>
@@ -19,7 +21,7 @@ export default {
 <style scoped>
 
 .first {
-    background-color: violet;
+    background-color: gainsboro;
     width: 100%;
     height: 100%;
     display: flex;
@@ -36,7 +38,7 @@ export default {
     margin: 0 auto;
     margin-top: 70px;
     position: absolute;
-    background-color: wheat;
+    background-color: azure;
     padding: 0;
     display: flex;
 }
@@ -44,7 +46,7 @@ export default {
 .obj {
     width: 200px;
     height: 200px;
-    background-color: turquoise;
+    background-color: steelblue;
     margin: 10px;
 }
 
