@@ -16,6 +16,7 @@
   </header>
 
   <main class="main">
+    <button id="btn">INSTALL</button>
     <div class="card">
       <img src="images/shield.png" alt="Captain Shield">
     </div>
@@ -28,6 +29,25 @@
   </main>
 
   <script>
+    let deferredPrompt;
+    window.addEventListener('beforeinstallprompt', function(e) {
+      console.log('beforeinstallprompt Event fired')
+      e.preventDefault()
+      deferredPrompt = e;
+    })
+
+    var btn = document.getElementById('btn')
+    btn.addEventListener('click', function(e) {
+      alert('hello')
+      deferredPrompt.prompt()
+      deferredPrompt.userChoice.then(function(result) {
+        if (result === 'accepted') {
+          console.log('The app has been installed')
+        }
+        deferredPrompt = null
+      })
+    })
+
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('sw.js')
       .then(function(success) {
