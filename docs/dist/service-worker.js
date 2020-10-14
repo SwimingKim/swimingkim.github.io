@@ -37,7 +37,7 @@
 /* eslint-disable indent, no-unused-vars, no-multiple-empty-lines, max-nested-callbacks, space-before-function-paren, quotes, comma-spacing */
 'use strict';
 
-var precacheConfig = [["/dist/bundles.js","003135604ffb4fb644db8917fb4662de"],["css/app.css","7c6e9abd4fc2247b2360bff42acb12a3"],["images/gauntlet.jpg","7a0a7a43efc0b293a7c6513ba5d2257e"],["images/hammer.png","a460a6315f548e96f7fa92d133e4c662"],["images/refresh.svg","f73272d4efd233a85e8c649d26126f01"],["images/shield.png","98ce818f683e8fba0e87867cf08a0ebc"],["index.html","fb0a8765b7ddf8cfc7d4248e101855a3"],["manifest.json","d8b34d82f72c39eda7f5a44bf71e8971"]];
+var precacheConfig = [["/dist/bundles.js","fb2f26d29a18ea9ad8913267ee21f539"],["css/app.css","7c6e9abd4fc2247b2360bff42acb12a3"],["images/gauntlet.jpg","7a0a7a43efc0b293a7c6513ba5d2257e"],["images/hammer.png","a460a6315f548e96f7fa92d133e4c662"],["images/refresh.svg","f73272d4efd233a85e8c649d26126f01"],["images/shield.png","98ce818f683e8fba0e87867cf08a0ebc"],["index.html","4b1d36aaf90dd3032fa9497f563c5793"],["manifest.json","d8b34d82f72c39eda7f5a44bf71e8971"]];
 var cacheName = 'sw-precache-v3-pwa-offline-v4-' + (self.registration ? self.registration.scope : '');
 
 
