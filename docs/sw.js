@@ -1,45 +1,56 @@
-// 캐싱 스토리지에 저장될 파일 이름
-var CACHE_NAME = "pwa-offline-v1";
-// 캐싱할 웹 자원(이미지, css 등)의 목록
-var filesToCache = ["/", "/css/app.css"];
+self.importScripts('data/games.js');
 
-// 서비스 워커 설치 (웹 자원 캐싱)
-self.addEventListener("install", function (event) {
-  event.waitUnitl(
-    caches.open(CACHE_NAME) // pwa 파일
-    .then(function(cache) {
-      // pwa 파일에 다 집어 넣어라
-      return cache.addAll(filesToCache)
-    })
-    .catch(function(error) {
-      console.log(error)
+// Files to cache
+var cacheName = 'js13kPWA-v1';
+var appShellFiles = [
+  '/pwa-examples/js13kpwa/',
+  '/pwa-examples/js13kpwa/index.html',
+  '/pwa-examples/js13kpwa/app.js',
+  '/pwa-examples/js13kpwa/style.css',
+  '/pwa-examples/js13kpwa/fonts/graduate.eot',
+  '/pwa-examples/js13kpwa/fonts/graduate.ttf',
+  '/pwa-examples/js13kpwa/fonts/graduate.woff',
+  '/pwa-examples/js13kpwa/favicon.ico',
+  '/pwa-examples/js13kpwa/img/js13kgames.png',
+  '/pwa-examples/js13kpwa/img/bg.png',
+  '/pwa-examples/js13kpwa/icons/icon-32.png',
+  '/pwa-examples/js13kpwa/icons/icon-64.png',
+  '/pwa-examples/js13kpwa/icons/icon-96.png',
+  '/pwa-examples/js13kpwa/icons/icon-128.png',
+  '/pwa-examples/js13kpwa/icons/icon-168.png',
+  '/pwa-examples/js13kpwa/icons/icon-192.png',
+  '/pwa-examples/js13kpwa/icons/icon-256.png',
+  '/pwa-examples/js13kpwa/icons/icon-512.png'
+];
+var gamesImages = [];
+for(var i=0; i<games.length; i++) {
+  gamesImages.push('data/img/'+games[i].slug+'.jpg');
+}
+var contentToCache = appShellFiles.concat(gamesImages);
+
+// Installing Service Worker
+self.addEventListener('install', function(e) {
+  console.log('[Service Worker] Install');
+  e.waitUntil(
+    caches.open(cacheName).then(function(cache) {
+      console.log('[Service Worker] Caching all: app shell and content');
+      return cache.addAll(contentToCache);
     })
   );
 });
 
-// self.addEventListener('install', function(event){
-//     console.log('[Service Worker] Install');
-//     event.waitUntil(
-//         caches.open(CACHE_NAME) // pwa 파일
-//         .then(function(cache){
-//             // pwa 파일에 다 집어 넣어라
-//             return cache.addAll(filesToCache);
-//         })
-//         .catch(function(error) {
-//             return console.log(error)
-//         })
-//     );
-// });
-
-// self.addEventListener('fetch', function(event){
-//   console.log('[Service Worker] Fetch');
-//   event.respondWith(
-//     caches.match(event.request)
-//       .then(function(response){
-//         return response || fetch(event.request);
-//       })
-//       .catch(function(error){
-//         return console.log(error);
-//       })
-//   );
-// });
+// Fetching content using Service Worker
+self.addEventListener('fetch', function(e) {
+  e.respondWith(
+    caches.match(e.request).then(function(r) {
+      console.log('[Service Worker] Fetching resource: '+e.request.url);
+      return r || fetch(e.request).then(function(response) {
+        return caches.open(cacheName).then(function(cache) {
+          console.log('[Service Worker] Caching new resource: ' + e.request.url);
+          cache.put(e.request, response.clone());
+          return response;
+        });
+      });
+    })
+  );
+});
