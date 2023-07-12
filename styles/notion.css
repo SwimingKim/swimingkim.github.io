@@ -245,6 +245,10 @@
   transition-duration: 300ms;
 }
 
+.notion-list {
+  max-width: var(--notion-max-width);
+}
+
 .notion-red_background,
 .notion-pink_background,
 .notion-blue_background,

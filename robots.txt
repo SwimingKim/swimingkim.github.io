@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /
+
+Sitemap: https://swimingkim.github.io/sitemap.xml
