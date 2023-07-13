@@ -49,6 +49,9 @@
 		<loc>https://swimingkim.github.io/post_post_cpp_vector</loc>
 	</url>
 	<url>
+		<loc>https://swimingkim.github.io/post_easy_profiler</loc>
+	</url>
+	<url>
 		<loc>https://swimingkim.github.io/post_ros2_ydlidar</loc>
 	</url>
 	<url>
@@ -76,6 +79,9 @@
 		<loc>https://swimingkim.github.io/post_vscode_x11</loc>
 	</url>
 	<url>
+		<loc>https://swimingkim.github.io/post_tdd_demo</loc>
+	</url>
+	<url>
 		<loc>https://swimingkim.github.io/post_regex</loc>
 	</url>
 	<url>
@@ -92,6 +98,9 @@
 	</url>
 	<url>
 		<loc>https://swimingkim.github.io/post_binary</loc>
+	</url>
+	<url>
+		<loc>https://swimingkim.github.io/post_slam</loc>
 	</url>
 	<url>
 		<loc>https://swimingkim.github.io/post_m1_linux</loc>
