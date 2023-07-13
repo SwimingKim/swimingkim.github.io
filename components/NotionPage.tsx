@@ -242,6 +242,20 @@ export const NotionPage: React.FC<types.PageProps> = ({
     getPageProperty<string>('Description', block, recordMap) ||
     config.description
 
+  try {
+    Object.keys(recordMap.block).forEach((key) => {
+      try {
+        console.log(recordMap.block[key].value.properties.language[0][0]);
+        if (recordMap.block[key].value.properties.language[0][0] === 'C++') {
+          recordMap.block[key].value.properties.language[0][0] = 'Cpp'
+        }
+        else if (recordMap.block[key].value.properties.language[0][0] === 'F#') {
+          recordMap.block[key].value.properties.language[0][0] = 'Fsharp'
+        }
+      } catch (_){ console.error(error) }
+    })
+  } catch (_) { console.error(error) }
+
   return (
     <>
       <PageHead
